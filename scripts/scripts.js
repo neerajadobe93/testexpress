@@ -115,6 +115,42 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+
+
+// custom sidekick
+
+
+const foo = ({ detail }) => {
+  const sk = detail.data;
+  console.log("express editing starts");
+};
+
+const sk = document.querySelector('helix-sidekick');
+if (sk) {
+  // sidekick already loaded
+  sk.addEventListener('custom:express', foo);
+} else {
+  // wait for sidekick to be loaded
+  document.addEventListener('helix-sidekick-ready', () => {
+    document.querySelector('helix-sidekick')
+      .addEventListener('custom:express', foo);
+  }, { once: true });
+}
+
+
+
+
+
+// custom sidekick
+
+
+
+
+
+
+
+
+
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);

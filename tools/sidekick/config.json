@@ -2,12 +2,11 @@
     "project": "express",
     "plugins": [
         {
-          "id": "library",
-          "title": "Library",
-          "isPalette": true,
-          "paletteRect": "top: auto; bottom: 25px; left: 25px; height: 388px; width: 360px;",
-          "url": "/tools/library",
-          "includePaths": [ "**.**" ]
+          "id": "express",
+          "title": "Edit Form",
+          "environments": ["dev", "preview"],
+          "includePaths": [ "**.**" ],
+          "event": "express"
         }
     ]
 
