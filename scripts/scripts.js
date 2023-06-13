@@ -122,7 +122,8 @@ function loadDelayed() {
 
 const foo = ({ detail }) => {
   const sk = detail.data;
-  console.log("express editing starts");
+  console.log(sk);
+   alert("no form exist on this page ");
 };
 
 const sk = document.querySelector('helix-sidekick');
